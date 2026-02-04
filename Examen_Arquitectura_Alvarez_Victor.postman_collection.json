@@ -1,0 +1,438 @@
+{
+  "info": {
+    "_postman_id": "4fe3e16b-058b-47b1-bef7-1aafc2cb8b72",
+    "name": "Examen_Arquitectura_Alvarez_Victor",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45819192",
+    "_collection_link": "https://go.postman.co/collection/45819192-4fe3e16b-058b-47b1-bef7-1aafc2cb8b72?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01_Public_Health",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/public/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "public",
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03_Listar_Reglas",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "tokenName",
+              "value": "arq_puce_token_exam",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "clientSecret",
+              "value": "m01afc5nlfv3m95qkgjr3oaavaff3m1jlkltmlee09csvr7ahbb",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "5c9u4r5vrebsbec86fehmmqha0",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "authUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/login",
+              "type": "string"
+            },
+            {
+              "key": "redirect_uri",
+              "value": "https://d84l1y8p4kdic.cloudfront.net",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "authorization_code",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/rules",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "rules"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02_Crear_Regla_Admin",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "tokenName",
+              "value": "arq_puce_token_exam",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "clientSecret",
+              "value": "m01afc5nlfv3m95qkgjr3oaavaff3m1jlkltmlee09csvr7ahbb",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "5c9u4r5vrebsbec86fehmmqha0",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "authUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/login",
+              "type": "string"
+            },
+            {
+              "key": "redirect_uri",
+              "value": "https://d84l1y8p4kdic.cloudfront.net",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "authorization_code",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Regla de Prueba Examen\",\r\n  \"description\": \"Verificando que se guarde con mi usuario\",\r\n  \"isActive\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/rules",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "rules"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04_Actualizar_Regla",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "tokenName",
+              "value": "arq_puce_token_exam",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "clientSecret",
+              "value": "m01afc5nlfv3m95qkgjr3oaavaff3m1jlkltmlee09csvr7ahbb",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "5c9u4r5vrebsbec86fehmmqha0",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "authUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/login",
+              "type": "string"
+            },
+            {
+              "key": "redirect_uri",
+              "value": "https://d84l1y8p4kdic.cloudfront.net",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "authorization_code",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Regla Editada\",\r\n  \"description\": \"Nombre cambiado para el examen\",\r\n  \"isActive\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/rules/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "rules",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05_Toggle_Status",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "tokenName",
+              "value": "arq_puce_token_exam",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "clientSecret",
+              "value": "m01afc5nlfv3m95qkgjr3oaavaff3m1jlkltmlee09csvr7ahbb",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "5c9u4r5vrebsbec86fehmmqha0",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/oauth2/token",
+              "type": "string"
+            },
+            {
+              "key": "authUrl",
+              "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/login",
+              "type": "string"
+            },
+            {
+              "key": "redirect_uri",
+              "value": "https://d84l1y8p4kdic.cloudfront.net",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "authorization_code",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/rules/1/toggle",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "rules",
+            "1",
+            "toggle"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "refreshRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "tokenRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "authRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "tokenName",
+        "value": "arq_puce_token_sensitive",
+        "type": "string"
+      },
+      {
+        "key": "challengeAlgorithm",
+        "value": "S256",
+        "type": "string"
+      },
+      {
+        "key": "redirect_uri",
+        "value": "https://d84l1y8p4kdic.cloudfront.net",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      },
+      {
+        "key": "clientSecret",
+        "value": "m01afc5nlfv3m95qkgjr3oaavaff3m1jlkltmlee09csvr7ahbb",
+        "type": "string"
+      },
+      {
+        "key": "clientId",
+        "value": "5c9u4r5vrebsbec86fehmmqha0",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/login",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "client_authentication",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://us-east-2xxmz33kat.auth.us-east-2.amazoncognito.com/oauth2/token",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}

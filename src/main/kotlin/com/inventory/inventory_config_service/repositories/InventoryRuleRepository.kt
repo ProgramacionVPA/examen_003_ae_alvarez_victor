@@ -7,8 +7,7 @@ import org.springframework.stereotype.Repository
 @Repository
 interface InventoryRuleRepository : JpaRepository<InventoryRule, Long> {
 
+    fun findByNameContainingIgnoreCase(name: String): List<InventoryRule>
+
     fun findByIsActiveTrue(): List<InventoryRule>
-
-
-    fun findByName(name: String): InventoryRule?
 }
