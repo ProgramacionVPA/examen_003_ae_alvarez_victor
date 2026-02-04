@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 @RestControllerAdvice
 class GlobalExceptionHandler {
 
-    // 404 - Not Found
+    // 404 - Not Found.
     @ExceptionHandler(NotFoundException::class)
     fun handleNotFoundException(ex: NotFoundException): ResponseEntity<ErrorResponse> {
         return ResponseEntity(
