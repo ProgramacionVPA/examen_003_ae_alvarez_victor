@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+aws:
+  cognito:
+    region: us-east-2
+    user_pool_id: us-east-2_xXMZ33kAT
+
+spring:
+  application:
+    name: inventory-config-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/inventory_db
+    username: postgres
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.${aws.cognito.region}.amazonaws.com/${aws.cognito.user_pool_id}
+          jwk-set-uri: https://cognito-idp.${aws.cognito.region}.amazonaws.com/${aws.cognito.user_pool_id}/.well-known/jwks.json
