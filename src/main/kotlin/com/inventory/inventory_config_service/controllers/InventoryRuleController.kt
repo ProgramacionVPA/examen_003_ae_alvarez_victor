@@ -18,8 +18,10 @@ class InventoryRuleController(
 ) {
 
     private fun getUserIdFromToken(jwt: Jwt): String {
-        return jwt.claims["sub"] as? String ?: "unknown_user"
+
+        return jwt.claims["username"] as? String ?: jwt.claims["sub"] as? String ?: "unknown"
     }
+
 
     @GetMapping
     fun getAll(): ResponseEntity<List<InventoryRuleResponse>> {
@@ -31,8 +33,9 @@ class InventoryRuleController(
         return ResponseEntity.ok(service.getRuleById(id))
     }
 
+
     @PostMapping
-    @PreAuthorize("hasRole('ROLE_admin')")
+    @PreAuthorize("hasRole('ROLE_admin')") // <--- Aquí está el ajuste para tu grupo 'admin'
     fun create(
         @Valid @RequestBody request: InventoryRuleRequest,
         @AuthenticationPrincipal jwt: Jwt

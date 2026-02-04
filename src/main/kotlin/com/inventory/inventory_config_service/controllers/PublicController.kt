@@ -13,7 +13,8 @@ class PublicController {
     fun health(): Map<String, Any> {
         return mapOf(
             "status" to "OK",
-            "timestamp" to LocalDateTime.now().toString()
+            "timestamp" to LocalDateTime.now().toString(),
+            "service" to "Inventory Config Service"
         )
     }
 }
